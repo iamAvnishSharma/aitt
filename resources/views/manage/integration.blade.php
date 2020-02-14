@@ -18,7 +18,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="#">
+        <a class="nav-link" href="#">
           <span data-feather="shopping-cart"></span>
           Student<span class="sr-only">(current)</span>
         </a>
@@ -35,8 +35,8 @@
           Cources/Subjects
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/manage/integration">
+      <li class="nav-item ">
+        <a class="nav-link active" href="/manage/integration">
           <span data-feather="layers"></span>
           Integrations
         </a>
@@ -48,10 +48,10 @@
 <form class="needs-validation" novalidate>
 
     <div class="mb-3">
-      <label for="username">Identifier</label>
+      <label for="username">Faculty</label>
       <div class="input-group">
         
-        <input type="text" class="form-control" id="username" placeholder="Identifier" required>
+        <input type="text" class="form-control" id="username" placeholder="Faculty" required>
         <div class="invalid-feedback" style="width: 100%;">
           required.
         </div>
@@ -59,10 +59,10 @@
     </div>
 
     <div class="mb-3">
-      <label for="course">course</label>
-      <input type="text" class="form-control" id="course" placeholder="MBATECH CS" required>
+      <label for="Subject">Subject</label>
+      <input type="text" class="form-control" id="subject" placeholder="MBATECH CS" required>
       <div class="invalid-feedback">
-        Please enter the course.
+        Please enter the Subject.
       </div>
     </div>
 

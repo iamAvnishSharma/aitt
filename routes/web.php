@@ -35,6 +35,10 @@ Route::get('/manage/subject' , function(){
     return view('manage.subject');
 });
 
+Route::get('/manage/integration' , function(){
+    return view('manage.integration');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -36,7 +36,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/manage/integration">
           <span data-feather="layers"></span>
           Integrations
         </a>

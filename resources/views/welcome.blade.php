@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a href="{{ route('manage')}}">Management</a>
-                    <a href="https://laracasts.com">Student</a>
+                    <a href="{{ url('/home') }}">Student</a>
                     {{--<a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>

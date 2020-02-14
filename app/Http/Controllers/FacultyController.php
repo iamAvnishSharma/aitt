@@ -15,6 +15,8 @@ class FacultyController extends Controller
     public function index()
     {
         //
+        $faculties = Faculty::all()->paginate(50);
+        return view('manage.facultyall')->with('faculties',$faculties);
     }
 
     /**

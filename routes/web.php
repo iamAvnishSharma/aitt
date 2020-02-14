@@ -14,3 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/manage' , function(){
+    return view('manage.home');
+})->name('manage');
+
+Route::get('/manage/studentgroup' , function(){
+    return view('manage.studentgroup');
+});
+
+Route::get('/manage/professor' , function(){
+    return view('manage.professor');
+});
+
+Route::get('/manage/room' , function(){
+    return view('manage.room');
+});
+
+Route::get('/manage/subject' , function(){
+    return view('manage.subject');
+});

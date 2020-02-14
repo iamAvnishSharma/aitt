@@ -34,3 +34,7 @@ Route::get('/manage/room' , function(){
 Route::get('/manage/subject' , function(){
     return view('manage.subject');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

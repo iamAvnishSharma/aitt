@@ -45,7 +45,7 @@ Route::get('/tt/sview' , function(){
     $divs = DB::select('SELECT division FROM division_tt GROUP BY division');
     
     // print_r($divs);
-    return view('tt.div', ['divs' => $divs]);
+    return view('tt.selectdiv', ['divs' => $divs]);
 });
 
 Route::get('/tt/student' , function(Request $request){
@@ -56,6 +56,24 @@ Route::get('/tt/student' , function(Request $request){
 
     return view('tt.student', ['rows' => $tt, 'div' => $div]);
 });
+
+Route::get('/tt/fview' , function(){
+
+    $divs = DB::select('SELECT teacher FROM teachers_tt GROUP by teacher');
+    
+    // print_r($divs);
+    return view('tt.selectteacher', ['divs' => $divs]);
+});
+
+Route::get('/tt/faculty' , function(Request $request){
+    $div = $request->input('div');
+
+    $tt = DB ::select("SELECT * FROM teachers_tt WHERE teacher = '$div'");
+    // print_r($tt);
+
+    return view('tt.student', ['rows' => $tt, 'div' => $div]);
+});
+
 
 Auth::routes();
 

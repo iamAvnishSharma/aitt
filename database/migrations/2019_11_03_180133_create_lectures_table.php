@@ -15,10 +15,10 @@ class CreateLecturesTable extends Migration
     {
         Schema::create('lectures', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->int('roomid');
-            $table->int('teacherid');
-            $table->int('capacity');
-            $table->int('subjectid');
+            // $table->int('roomid');
+            // $table->int('teacherid');
+            // $table->int('capacity');
+            // $table->int('subjectid');
             $table->timestamps();
         });
     }

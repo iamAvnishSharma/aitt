@@ -15,8 +15,8 @@ class CreateTeachersInputTable extends Migration
     {
         Schema::create('teachers_input', function (Blueprint $table) {
             $table->string('teacher', 255);
-            $table->string('subject', 255);
-            $table->string('division', 255);
+            $table->string('subject', 255)->nullable();
+            $table->string('divisions', 255)->nullable();
         });
     }
 

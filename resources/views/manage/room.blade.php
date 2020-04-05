@@ -78,4 +78,25 @@
   </form>
 
 
+  
+<hr>
+<hr>
+<hr>
+  <form action="/import-cr-excel" method="POST" enctype="multipart/form-data">
+    @csrf
+  <div class="row">
+   <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <label >Select File to Import:</label>
+            <div class="col-md-9">
+            <input type="file" id="sample_file" name="sample_file" >
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+    <input class="form-control" type="submit" name="submit" value="Submit" >
+    </div>
+</div>
+</form>
+
 @endsection

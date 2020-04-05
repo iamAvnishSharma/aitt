@@ -15,9 +15,9 @@ class CreateDivisionInputTable extends Migration
     {
         Schema::create('division_input', function (Blueprint $table) {
             $table->string('division', 255);
-            $table->string('subject', 255);
-            $table->string('hours_in_week', 255);
-            $table->string('combined', 255);
+            $table->string('subject', 255)->nullable();
+            $table->string('hours_in_week', 255)->nullable();
+            $table->string('combined', 255)->nullable();
         });
     }
 

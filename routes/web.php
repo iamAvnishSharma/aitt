@@ -79,6 +79,9 @@ Route::get('import-export-csv-excel',array('as'=>'excel.import','uses'=>'FileCon
 Route::post('import-csv-excel',array('as'=>'import-csv-excel','uses'=>'FileController@importFileIntoDB'));
 Route::get('download-excel-file/{type}', array('as'=>'excel-file','uses'=>'FileController@downloadExcelFile'));
 
+Route::post('import-cr-excel',array('as'=>'import-csv-excel','uses'=>'FileController@importcrIntoDB'));
+Route::post('import-teacher-excel',array('as'=>'import-csv-excel','uses'=>'FileController@importteacherIntoDB'));
+Route::post('import-division-excel',array('as'=>'import-csv-excel','uses'=>'FileController@importdivisionsIntoDB'));
 
 Auth::routes();
 

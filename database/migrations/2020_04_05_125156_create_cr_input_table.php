@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRoomsTable extends Migration
+class CreateCrInputTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateRoomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('rooms', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->text('building');
-            // $table->int('number');
-            $table->timestamps();
+        Schema::create('cr_input', function (Blueprint $table) {
+            $table->string('cr', 255);
+            $table->string('division', 255)->nullable();
+            $table->string('Subject', 255)->nullable();
         });
     }
 
@@ -28,6 +27,6 @@ class CreateRoomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rooms');
+        Schema::dropIfExists('cr_input');
     }
 }

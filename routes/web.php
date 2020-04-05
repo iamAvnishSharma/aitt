@@ -75,6 +75,11 @@ Route::get('/tt/faculty' , function(Request $request){
 });
 
 
+Route::get('import-export-csv-excel',array('as'=>'excel.import','uses'=>'FileController@importExportExcelORCSV'));
+Route::post('import-csv-excel',array('as'=>'import-csv-excel','uses'=>'FileController@importFileIntoDB'));
+Route::get('download-excel-file/{type}', array('as'=>'excel-file','uses'=>'FileController@downloadExcelFile'));
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

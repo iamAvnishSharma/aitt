@@ -24,11 +24,13 @@ class FileController extends Controller
                 if(!empty($arr)){
                     \DB::table('cr_input')->truncate();
                     \DB::table('cr_input')->insert($arr);
-                    dd('Insert Record successfully.');
+                    // dd('Insert Record successfully.');
+                    return back()->with('alert', 'Inserted successfully!');
                 }
             }
         }
-        dd('Request data does not have any files to import.');      
+        // dd('Request data does not have any files to import.'); 
+        return back()->with('alert', 'Request data does not have any files to import.');     
     } 
 
     public function importteacherIntoDB(Request $request){
@@ -43,12 +45,12 @@ class FileController extends Controller
                     \DB::table('teachers_input')->truncate();
                     \DB::table('teachers_input')->insert($arr);
                     // dd('Insert Record successfully.');
-                    alert("added successfully");
-                    return back();
+                    return back()->with('alert', 'Inserted successfully!');
                 }
             }
         }
-        dd('Request data does not have any files to import.');      
+        // dd('Request data does not have any files to import.'); 
+        return back()->with('alert', 'Request data does not have any files to import.');    
     }
 
     public function importdivisionsIntoDB(Request $request){
@@ -62,11 +64,13 @@ class FileController extends Controller
                 if(!empty($arr)){
                     \DB::table('division_input')->truncate();
                     \DB::table('division_input')->insert($arr);
-                    dd('Insert Record successfully.');
+                    // dd('Insert Record successfully.');
+                    return back()->with('alert', 'Inserted successfully!');
                 }
             }
         }
-        dd('Request data does not have any files to import.');      
+        // dd('Request data does not have any files to import.'); 
+        return back()->with('alert', 'Request data does not have any files to import.');    
     } 
 
 

@@ -19,11 +19,7 @@
 
   <body>
 
-    @if (session('alert'))
-    <div class="alert alert-success">
-        {{ session('alert') }}
-    </div>
-@endif
+    
 
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">AITT</a>
@@ -81,8 +77,14 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-            @yield('content')
+          @if (session('alert'))
+              <div class="alert alert-success">
+                  {{ session('alert') }}
+              </div>
+          @endif  
           
+          @yield('content')
+
         </main>
       </div>
     </div>

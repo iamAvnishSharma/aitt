@@ -18,6 +18,7 @@ class CreateDivisionInputTable extends Migration
             $table->string('subject', 255)->nullable();
             $table->string('hours_in_week', 255)->nullable();
             $table->string('combined', 255)->nullable();
+            $table->string('batches', 255)->nullable();
         });
     }
 

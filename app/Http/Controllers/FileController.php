@@ -59,7 +59,7 @@ class FileController extends Controller
             $data = \Excel::load($path)->get();
             if($data->count()){
                 foreach ($data as $key => $value) {
-                    $arr[] = ['division' => $value->division, 'subject' => $value->subject, 'hours_in_week' => $value->hours_in_week, 'combined' => $value->combined];
+                    $arr[] = ['division' => $value->division, 'subject' => $value->subject, 'hours_in_week' => $value->hours_in_week, 'combined' => $value->combined, 'batches' => $value->batches];
                 }
                 if(!empty($arr)){
                     \DB::table('division_input')->truncate();

@@ -13,7 +13,7 @@ class CreateTeacherTtTable extends Migration
      */
     public function up()
     {
-        Schema::create('teacher_tt', function (Blueprint $table) {
+        Schema::create('teachers_tt', function (Blueprint $table) {
             $table->string('teacher', 255)->nullable();
             $table->string('timeslot', 255)->nullable();
             $table->string('Monday', 255)->nullable();
